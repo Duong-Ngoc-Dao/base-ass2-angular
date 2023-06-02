@@ -17,7 +17,8 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { GdAdminComponent } from './components/gd-admin/gd-admin.component';
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
-import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component'; 
+import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component'; 
 
 @NgModule({
   declarations: [ 
@@ -34,7 +35,8 @@ import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.compo
     DashboardComponent,
     GdAdminComponent,
     ListdiadiemComponent,
-    AdddiadiemComponent, 
+    AdddiadiemComponent,
+    EditdiadiemComponent, 
   ],
   imports: [
     BrowserModule,

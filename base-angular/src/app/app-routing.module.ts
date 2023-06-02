@@ -10,6 +10,7 @@ import { PagdetailComponent } from './pages/pagdetail/pagdetail.component';
 import { BlogComponent } from './pages/blog/blog.component'; 
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
 import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent }, 
       { path: 'diadiem', component: ListdiadiemComponent }, 
       { path: 'adddiadiem', component: AdddiadiemComponent }, 
+      { path: 'editdiadiem', component: EditdiadiemComponent }, 
     ],
   },
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { IProduct } from '../interfaces/diadiem';
 
 @Injectable({
   providedIn: 'root'
@@ -12,19 +13,21 @@ export class ProductService {
   ) {}
   API_URL = "http://localhost:3000/locations"
 
-  getAllProduct(){
-    return this.http.get(`${this.API_URL}`)
+  getProducts(): Observable<IProduct[]>{
+    return this.http.get<IProduct[]>(`${this.API_URL}`)
   }
-  addProduct(data: any){
-    return this.http.post(this.API_URL , data)
+  deleteProduct(id:number | string): Observable<IProduct>{
+    return this.http.delete<IProduct>(`${this.API_URL}/${id}`)
   }
-  deleteProduct(id : number){
-    return this.http.delete(`${this.API_URL}/${id}`)
+  addProduct(product: IProduct): Observable<IProduct>{
+    return this.http.post<IProduct>(this.API_URL , product)
   }
-  getDetailProduct(id: number){
-    return this.http.get(`${this.API_URL}/${id}`)
+  updateProduct(product: IProduct): Observable<IProduct>{
+    return this.http.put<IProduct>(`${this.API_URL}/${product.id}`, product)
   }
-  editProduct(id: number, data: any){
-    return this.http.put(`${this.API_URL}/${id}`, data)
+  getProduct(id: string): Observable<IProduct>{
+    return this.http.get<IProduct>(`${this.API_URL}/${id}`)
   }
+
+  
 }

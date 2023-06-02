@@ -12,10 +12,10 @@ export class ListdiadiemComponent {
   constructor(private ProductServive: ProductService){}
 
   ngOnInit(): void {
-    this.getAllProduct();
+    this.getProducts();
   }
-  getAllProduct() {
-    this.ProductServive.getAllProduct().subscribe(data => this.product = data)
+  getProducts() {
+    this.ProductServive.getProducts().subscribe(data => this.product = data)
   }
   deleteProduct(id: number){
     this.ProductServive.deleteProduct(id).subscribe(data => {
