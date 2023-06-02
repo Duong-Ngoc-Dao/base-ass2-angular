@@ -1,0 +1,22 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "location": "Hà Nội",
+      "img": "https://picsum.photos/200/300",
+      "mess": "Hồ Tây là “lá phổi” của Thủ đô với diện tích lòng hồ hơn 500ha"
+    },
+    {
+      "id": 2,
+      "location": "Hà Nội",
+      "img": "https://picsum.photos/200/300",
+      "mess": "Hồ Tây là “lá phổi” của Thủ đô với diện tích lòng hồ hơn 500ha"
+    },
+    {
+      "id": 3,
+      "location": "Hà Nội",
+      "img": "https://picsum.photos/200/300",
+      "mess": "Hồ Tây là “lá phổi” của Thủ đô với diện tích lòng hồ hơn 500ha"
+    }
+  ]
+}
