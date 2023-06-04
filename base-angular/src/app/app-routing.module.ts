@@ -3,11 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
-import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-import { ProductsComponent } from './pages/admin/products/products.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component'; 
 import { LienheComponent } from './pages/lienhe/lienhe.component';
 import { PagdetailComponent } from './pages/pagdetail/pagdetail.component';
+import { BlogComponent } from './pages/blog/blog.component'; 
+import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
+import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
+
 
 const routes: Routes = [
   {
@@ -16,6 +20,7 @@ const routes: Routes = [
       { path: '', component: HomeComponent }, 
       { path: 'pagedetail', component: PagdetailComponent }, 
       { path: 'lienhe', component: LienheComponent }, 
+      { path: 'posts', component: BlogComponent },  
     ]
   },
   {
@@ -23,8 +28,10 @@ const routes: Routes = [
     component: LayoutAdminComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'products', component: ProductsComponent }
+      { path: 'dashboard', component: DashboardComponent }, 
+      { path: 'locations', component: ListdiadiemComponent }, 
+      { path: 'adddiadiem', component: AdddiadiemComponent }, 
+      { path: 'editdiadiem', component: EditdiadiemComponent }, 
     ],
   },
 

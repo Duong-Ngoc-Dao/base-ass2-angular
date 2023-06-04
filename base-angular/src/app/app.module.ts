@@ -10,25 +10,33 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { HomeComponent } from './pages/home/home.component';
-import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-import { ProductsComponent } from './pages/admin/products/products.component';
+import { HomeComponent } from './pages/home/home.component'; 
 import { LienheComponent } from './pages/lienhe/lienhe.component';
 import { PagdetailComponent } from './pages/pagdetail/pagdetail.component';
+import { BlogComponent } from './pages/blog/blog.component'; 
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { GdAdminComponent } from './components/gd-admin/gd-admin.component';
+import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
+import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component'; 
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
     HeaderComponent, 
     FooterComponent, 
     LayoutClientComponent, 
     LayoutAdminComponent, 
     NotfoundComponent, 
-    HomeComponent, 
-    DashboardComponent, 
-    ProductsComponent,  
+    HomeComponent,  
     LienheComponent,
-    PagdetailComponent
+    PagdetailComponent,
+    BlogComponent,
+    DashboardComponent,
+    GdAdminComponent,
+    ListdiadiemComponent,
+    AdddiadiemComponent,
+    EditdiadiemComponent, 
   ],
   imports: [
     BrowserModule,
