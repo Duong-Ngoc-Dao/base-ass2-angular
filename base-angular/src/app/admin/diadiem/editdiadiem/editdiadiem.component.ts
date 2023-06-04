@@ -49,7 +49,7 @@ export class EditdiadiemComponent {
       }
       this.productService.updateProduct(product).subscribe(data => {
         alert("Update product successfully.")
-        this.Router.navigateByUrl('/admin/diadiem')
+        this.Router.navigateByUrl('/admin/locations')
       })
     }
     

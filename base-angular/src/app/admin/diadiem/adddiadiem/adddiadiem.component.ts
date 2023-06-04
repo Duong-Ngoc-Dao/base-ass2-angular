@@ -33,7 +33,7 @@ export class AdddiadiemComponent {
       }
       this.productService.addProduct(product).subscribe(data => {
         alert("Add product successfully.")
-        this.Router.navigateByUrl('/admin/diadiem')
+        this.Router.navigateByUrl('/admin/locations')
       })
     }
     
