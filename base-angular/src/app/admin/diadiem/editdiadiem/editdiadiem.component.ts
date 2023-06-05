@@ -12,7 +12,7 @@ import { ProductService } from 'src/app/services/product.service'
 export class EditdiadiemComponent {
   product!: IProduct
   productForm = this.formBuilder.group({
-    location: [''], 
+    name: [''], 
     img: ["https://picsum.photos/200/200"],
     mess: [''], 
   })
@@ -29,7 +29,7 @@ export class EditdiadiemComponent {
       this.productService.getProduct(id as string).subscribe(product => {
         this.product = product,
         this.productForm.patchValue({
-          location: product.location,
+          name: product.name,
           img: product.img,
           mess: product.mess,
         })
@@ -43,7 +43,7 @@ export class EditdiadiemComponent {
     if(this.productForm.valid){
       const product : IProduct = {
         id: this.product.id,
-        location: this.productForm.value.location || "", 
+        name: this.productForm.value.name || "", 
         img: this.productForm.value.img || "https://picsum.photos/200/200",
         mess: this.productForm.value.mess || "",
       }
