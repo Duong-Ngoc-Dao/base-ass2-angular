@@ -18,7 +18,11 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { GdAdminComponent } from './components/gd-admin/gd-admin.component';
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
 import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
-import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component'; 
+import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
+import { TourComponent } from './pages/tour/tour.component';
+import { DetailtourComponent } from './pages/tour/detailtour/detailtour.component'; 
+import { LocationComponent } from './pages/location/location.component';
+import { DetaillocationComponent } from './pages/location/detaillocation/detaillocation.component'
 
 @NgModule({
   declarations: [ 
@@ -36,7 +40,11 @@ import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.co
     GdAdminComponent,
     ListdiadiemComponent,
     AdddiadiemComponent,
-    EditdiadiemComponent, 
+    EditdiadiemComponent,
+    TourComponent,
+    DetailtourComponent, 
+    LocationComponent,
+    DetaillocationComponent,
   ],
   imports: [
     BrowserModule,

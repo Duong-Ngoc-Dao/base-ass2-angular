@@ -11,6 +11,10 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
 import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
 import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
+import { LocationComponent } from './pages/location/location.component';
+import { TourComponent } from './pages/tour/tour.component';
+import { DetailtourComponent } from './pages/tour/detailtour/detailtour.component'
+import { DetaillocationComponent } from './pages/location/detaillocation/detaillocation.component'
 
 
 const routes: Routes = [
@@ -20,7 +24,11 @@ const routes: Routes = [
       { path: '', component: HomeComponent }, 
       { path: 'pagedetail', component: PagdetailComponent }, 
       { path: 'lienhe', component: LienheComponent }, 
-      { path: 'posts', component: BlogComponent },  
+      { path: 'posts', component: BlogComponent }, 
+      { path: 'location', component: LocationComponent }, 
+      { path: 'location/detail/:id', component: DetaillocationComponent }, 
+      { path: 'tour', component: TourComponent }, 
+      { path: 'tour/detail/:id', component: DetailtourComponent }, 
     ]
   },
   {
