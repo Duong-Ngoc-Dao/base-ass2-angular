@@ -14,15 +14,20 @@ import { HomeComponent } from './pages/home/home.component';
 import { LienheComponent } from './pages/lienhe/lienhe.component';
 import { PagdetailComponent } from './pages/pagdetail/pagdetail.component';
 import { BlogComponent } from './pages/blog/blog.component'; 
+import { LocationComponent } from './pages/location/location.component';
+import { DetaillocationComponent } from './pages/location/detaillocation/detaillocation.component'
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { GdAdminComponent } from './components/gd-admin/gd-admin.component';
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
 import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
-import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
+import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component'; 
+import { ListtourComponent } from './admin/quanlitour/listtour/listtour.component';
+import { EdittourComponent } from './admin/quanlitour/edittour/edittour.component';
+import { AddtourComponent } from './admin/quanlitour/addtour/addtour.component';
 import { TourComponent } from './pages/tour/tour.component';
-import { DetailtourComponent } from './pages/tour/detailtour/detailtour.component'; 
-import { LocationComponent } from './pages/location/location.component';
-import { DetaillocationComponent } from './pages/location/detaillocation/detaillocation.component'
+import { DetailtourComponent } from './pages/tour/detailtour/detailtour.component';
+
+
 
 @NgModule({
   declarations: [ 
@@ -36,15 +41,18 @@ import { DetaillocationComponent } from './pages/location/detaillocation/detaill
     LienheComponent,
     PagdetailComponent,
     BlogComponent,
+    LocationComponent,
+    TourComponent,
+    DetailtourComponent,
+    DetaillocationComponent,
     DashboardComponent,
     GdAdminComponent,
     ListdiadiemComponent,
     AdddiadiemComponent,
-    EditdiadiemComponent,
-    TourComponent,
-    DetailtourComponent, 
-    LocationComponent,
-    DetaillocationComponent,
+    EditdiadiemComponent, 
+    ListtourComponent,
+    AddtourComponent,
+    EdittourComponent,
   ],
   imports: [
     BrowserModule,
