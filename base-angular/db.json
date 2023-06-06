@@ -1,20 +1,20 @@
 {
-  "locations": [
+  "products": [
     {
       "id": 1,
-      "location": "Hà Nội",
+      "name": "Hà Nội",
       "img": "https://picsum.photos/200/300",
       "mess": "Hồ Tây là “lá phổi” của Thủ đô với diện tích lòng hồ hơn 500ha"
     },
     {
       "id": 2,
-      "location": "Hà Nội",
+      "name": "Hà Nội",
       "img": "https://picsum.photos/200/300",
       "mess": "Hồ Tây là “lá phổi” của Thủ đô với diện tích lòng hồ hơn 500ha"
     },
     {
       "id": 3,
-      "location": "Hà Nội",
+      "name": "Hà Nội",
       "img": "https://picsum.photos/200/300",
       "mess": "Hồ Tây là “lá phổi” của Thủ đô với diện tích lòng hồ hơn 500ha"
     }
@@ -29,6 +29,7 @@
       "diachi": "Hà Nội"
     },
     {
+
       "id": 2,
       "location": "Hồ Tây,Hà Nội",
       "img": "https://picsum.photos/200/300",
@@ -43,6 +44,7 @@
       "nametour": "Du lịch Hồ Tây ",
       "price": 2,
       "diachi": "Hà Nội"
+
     }
   ]
 }

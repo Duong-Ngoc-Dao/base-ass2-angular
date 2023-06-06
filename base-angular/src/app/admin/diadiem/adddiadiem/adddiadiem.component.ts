@@ -17,7 +17,7 @@ export class AdddiadiemComponent {
   ){}
 
   productForm = this.formBuilder.group({
-    location: ['', Validators.required], 
+    name: ['', Validators.required], 
     img: ["https://picsum.photos/200/200"],
     mess: ['', Validators.required], 
 
@@ -26,7 +26,7 @@ export class AdddiadiemComponent {
   onHandleAdd(){
     if(this.productForm.valid){
       const product : IProduct = {
-        location: this.productForm.value.location || "", 
+        name: this.productForm.value.name || "", 
         img: this.productForm.value.img || "https://picsum.photos/200/200",
         mess: this.productForm.value.mess || "", 
 
