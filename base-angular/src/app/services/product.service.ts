@@ -13,6 +13,7 @@ export class ProductService {
   ) {}
   API_URL = "http://localhost:8080/api"
 
+
   getProducts(): Observable<IProduct[]>{
     return this.http.get<IProduct[]>(`${this.API_URL}`)
   }
