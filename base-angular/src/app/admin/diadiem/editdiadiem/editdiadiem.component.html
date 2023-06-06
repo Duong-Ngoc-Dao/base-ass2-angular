@@ -4,21 +4,26 @@
         (ngSubmit)="onHandleEdit()">
         <div class="pt-2">
             <p class="px-2 text-xl">Địa điểm</p>
-            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" formControlName="location" name="location" value="{{product.location}}"
+            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" formControlName="name"c  
                 placeholder="Tiêu đề">
         </div>
         <div class="pt-2">
             <p class="px-2 text-xl">Ảnh</p>
-            <input class="text-sm ml-2" type="file" formControlName="img" name="file">
+            <input class="text-sm ml-2" type="text" formControlName="img"   >
 
-            <img class="max-w-[200px] min-h[100px]" src="" alt="">
-            <input type="hidden" name="img" value="{{product.img}}">
-            <input type="hidden" name="id" value="{{product.id}}">
+            <!-- <img class="max-w-[200px] min-h[100px]" src="" alt="">
+            <input type="hidden" name="img"  >
+            <input type="hidden" name="id"  > -->
         </div>
         <div class="pt-2">
             <p class="px-2 text-xl">Nội dung</p>
+<<<<<<< HEAD
                 <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" formControlName="location" name="location" value="{{product.mess}}"
                 placeholder="Tiêu đề">
+=======
+            <textarea name="noiDung" id="" class="w-11/12 p-2 mx-2 border border-slate-700" cols="90"
+                rows="10"  formControlName="mess" ></textarea>
+>>>>>>> adb39ddc1b6f425e202ca0ef2fa3c331c272305a
         </div>
         <div class="flex space-x-3 ml-2">
             <button type="submit" name="btn_update"
