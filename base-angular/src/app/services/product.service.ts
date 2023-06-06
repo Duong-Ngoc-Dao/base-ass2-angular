@@ -30,5 +30,5 @@ export class ProductService {
     return this.http.get<IProduct>(`${this.API_URL}/${id}`)
   }
 
-  
+
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { FormBuilder, Validators } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router'
-import { IProduct } from 'src/app/interfaces/diadiem' 
+import { IProduct } from 'src/app/interfaces/diadiem'
 import { ProductService } from 'src/app/services/product.service'
 
 @Component({
@@ -12,9 +12,13 @@ import { ProductService } from 'src/app/services/product.service'
 export class EditdiadiemComponent {
   product!: IProduct
   productForm = this.formBuilder.group({
+<<<<<<< HEAD
+    location: [''],
+=======
     name: [''], 
+>>>>>>> adb39ddc1b6f425e202ca0ef2fa3c331c272305a
     img: ["https://picsum.photos/200/200"],
-    mess: [''], 
+    mess: [''],
   })
 
 
@@ -37,13 +41,17 @@ export class EditdiadiemComponent {
     })
   }
 
-  
+
 
   onHandleEdit(){
     if(this.productForm.valid){
       const product : IProduct = {
         id: this.product.id,
+<<<<<<< HEAD
+        location: this.productForm.value.location || "",
+=======
         name: this.productForm.value.name || "", 
+>>>>>>> adb39ddc1b6f425e202ca0ef2fa3c331c272305a
         img: this.productForm.value.img || "https://picsum.photos/200/200",
         mess: this.productForm.value.mess || "",
       }
@@ -52,7 +60,7 @@ export class EditdiadiemComponent {
         this.Router.navigateByUrl('/admin/locations')
       })
     }
-    
+
   }
 }
 

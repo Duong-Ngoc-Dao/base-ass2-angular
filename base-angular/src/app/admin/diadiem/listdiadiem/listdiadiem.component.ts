@@ -10,6 +10,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListdiadiemComponent {
   @Input() id: any;
+<<<<<<< HEAD
+  product: any = [];
+  constructor(private ProductServive: ProductService){}
+=======
   products: any = [];
 //   constructor(private ProductServive: ProductService){}
 
@@ -30,10 +34,23 @@ export class ListdiadiemComponent {
 // }
 
 constructor(private http: HttpClient) {}
+>>>>>>> adb39ddc1b6f425e202ca0ef2fa3c331c272305a
 
   ngOnInit(): void {
      this.getAllProducts()
   }
+<<<<<<< HEAD
+  getProducts() {
+    this.ProductServive.getProducts().subscribe(data => this.product = data)
+  }
+  deleteProduct(id: number){
+    this.ProductServive.deleteProduct(id).subscribe(data => {
+      this.product = this.product.filter((item : any) => {
+        return item.id != id
+      })
+    })
+
+=======
 
   adminProducts: any
 
@@ -44,6 +61,7 @@ constructor(private http: HttpClient) {}
         console.log(res)
         this.adminProducts = res.docs
      })
+>>>>>>> adb39ddc1b6f425e202ca0ef2fa3c331c272305a
   }
 
 
