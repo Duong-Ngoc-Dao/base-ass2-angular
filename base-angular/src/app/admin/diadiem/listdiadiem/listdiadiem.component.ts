@@ -8,21 +8,21 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ListdiadiemComponent {
   @Input() id: any;
-  locations: any = [];
+  product: any = [];
   constructor(private ProductServive: ProductService){}
 
   ngOnInit(): void {
     this.getProducts();
   }
   getProducts() {
-    this.ProductServive.getProducts().subscribe(data => this.locations = data)
+    this.ProductServive.getProducts().subscribe(data => this.product = data)
   }
   deleteProduct(id: number){
     this.ProductServive.deleteProduct(id).subscribe(data => {
-      this.locations = this.locations.filter((item : any) => {
+      this.product = this.product.filter((item : any) => {
         return item.id != id
       })
     })
-    
+
   }
 }

@@ -23,7 +23,7 @@ export class EdittourComponent {
     private formBuilder: FormBuilder,
     private productService: ProductService,
     private route: ActivatedRoute,
-    private router: Router
+    private Router: Router
   ) {
     this.getProduct();
   }
@@ -59,19 +59,19 @@ export class EdittourComponent {
         price: Number(this.productForm.value.price) || 0,
         diachi: this.productForm.value.diachi || "",
       };
-      if (!product.id) { 
+      if (!product.id) {
         this.productService.getProducts().subscribe(products => {
           const maxId = products.reduce((acc: number, cur: any) => cur.id > acc ? cur.id : acc, 0);
-          product.id = maxId + 1; 
+          product.id = maxId + 1;
           this.productService.updateProduct(product).subscribe(data => {
             alert("Update product successfully.")
-            this.router.navigateByUrl('/admin/quanlitour')
+            this.Router.navigateByUrl('/admin/quanlitour')
           });
         });
       } else {
         this.productService.updateProduct(product).subscribe(data => {
           alert("Update product successfully.")
-          this.router.navigateByUrl('/admin/quanlitour')
+          this.Router.navigateByUrl('/admin/quanlitour')
         });
       }
     }
