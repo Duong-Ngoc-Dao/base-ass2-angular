@@ -18,9 +18,9 @@ import { LocationComponent } from './pages/location/location.component';
 import { DetaillocationComponent } from './pages/location/detaillocation/detaillocation.component'
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { GdAdminComponent } from './components/gd-admin/gd-admin.component';
-import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
-import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
-import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
+// import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
+// import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+// import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
 import { ListtourComponent } from './admin/quanlitour/listtour/listtour.component';
 import { EdittourComponent } from './admin/quanlitour/edittour/edittour.component';
 import { AddtourComponent } from './admin/quanlitour/addtour/addtour.component';
@@ -48,9 +48,9 @@ import { ListquanliusersComponent } from './admin/quanliusers/quanliusers.compon
     DetaillocationComponent,
     DashboardComponent,
     GdAdminComponent,
-    ListdiadiemComponent,
-    AdddiadiemComponent,
-    EditdiadiemComponent,
+    // ListdiadiemComponent,
+    // AdddiadiemComponent,
+    // EditdiadiemComponent,
     ListtourComponent,
     AddtourComponent,
     EdittourComponent,

@@ -23,6 +23,6 @@ export class ListtourComponent {
         return item.id != id
       })
     })
-    
+
   }
 }
