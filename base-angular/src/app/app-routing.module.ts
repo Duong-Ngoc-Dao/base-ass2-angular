@@ -31,7 +31,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent }, 
       { path: 'locations', component: ListdiadiemComponent }, 
       { path: 'adddiadiem', component: AdddiadiemComponent }, 
-      { path: 'editdiadiem', component: EditdiadiemComponent }, 
+      { path: 'editdiadiem/:_id', component: EditdiadiemComponent }, 
     ],
   },
 

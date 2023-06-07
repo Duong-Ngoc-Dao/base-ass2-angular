@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
-import { HttpClient } from '@angular/common/http';
+import { IProduct } from 'src/app/interfaces/diadiem';
 
 
 @Component({
@@ -10,55 +11,43 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListdiadiemComponent {
   @Input() id: any;
-  products: any = [];
-//   constructor(private ProductServive: ProductService){}
+  @Input() index!: number
 
-//   ngOnInit(): void {
-//     this.getProducts();
-//   }
-//   getProducts() {
-//     this.ProductServive.getProducts().subscribe(data => this.products = data)
-//   }
-//   deleteProduct(id: number){
-//     this.ProductServive.deleteProduct(id).subscribe(data => {
-//       this.products = this.products.filter((item : any) => {
-//         return item.id != id
-//       })
-//     })
-    
-//   }
-// }
+  // products: any[] | undefined;
+  products: IProduct[] = []
+  constructor(private productService: ProductService, private router: Router) { }
 
-constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-     this.getAllProducts()
+  ngOnInit() {
+    this.getProducts();
   }
 
-  adminProducts: any
-
-  getAllProducts(): void {
-     const limit = 140 // lấy toàn bộ sản phẩm
-     const apiUrl = `http://localhost:8080/api/products?_limit=${limit}`
-     this.http.get(apiUrl).subscribe((res: any) => {
-        console.log(res)
-        this.adminProducts = res.docs
-     })
+  getProducts() {
+    this.productService.getProducts().subscribe(
+      (response) => {
+        this.products = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
+  navigateToDetail(productId: string) {
+    this.router.navigate(['/products/' + productId]);
+  }
 
-// deleteProduct(id: any): void {
-//   const apiUrl = `http://localhost:8080/api/products/${id}`;
-//   this.http.delete(apiUrl, {headers: {
-//     "authorization": "Bearer" + JSON.stringify(localStorage.getItem("token"))
-//   }}).subscribe((res: any) => {
-//   console.log(res);
-  
-//   // xóa sản phẩm khỏi danh sách hiển thị
-//   this.adminProducts = this.adminProducts.filter((product: any) => id !== product._id);
-//   });
-  
-//   }
+  @Output() onRemove: EventEmitter<any> = new EventEmitter()
+
+
+
+  removeItem(id: any) {
+    this.productService.deleteProduct(id).subscribe(() => {
+      this.products = this.products.filter(item => item._id !== id)
+    }, (error) => {
+      console.log(error.message);
+
+    })
+  }
+
 
 }
-

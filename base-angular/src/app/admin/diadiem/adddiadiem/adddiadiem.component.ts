@@ -1,8 +1,7 @@
-import { Component } from '@angular/core'
-import { FormBuilder, Validators } from '@angular/forms'
-import { Router } from '@angular/router'
-import { IProduct } from 'src/app/interfaces/diadiem'
-import { ProductService } from 'src/app/services/product.service'
+import { ProductService } from 'src/app/services/product.service';
+import { Component } from '@angular/core';
+import { Validators, FormBuilder } from '@angular/forms';
+import { IProduct } from 'src/app/interfaces/diadiem';
 
 @Component({
   selector: 'app-adddiadiem',
@@ -10,32 +9,26 @@ import { ProductService } from 'src/app/services/product.service'
   styleUrls: ['./adddiadiem.component.css']
 })
 export class AdddiadiemComponent {
-  constructor(
-    private formBuilder: FormBuilder, 
-    private productService: ProductService,
-    private Router: Router
-  ){}
+  product: IProduct = {
 
-  productForm = this.formBuilder.group({
-    name: ['', Validators.required], 
-    img: ["https://picsum.photos/200/200"],
-    mess: ['', Validators.required], 
+    name: '', 
+    img: '',
+    mess: '',
+  };
+  products!: IProduct[];
 
-  })
+  constructor(private productService: ProductService) {}
 
-  onHandleAdd(){
-    if(this.productForm.valid){
-      const product : IProduct = {
-        name: this.productForm.value.name || "", 
-        img: this.productForm.value.img || "https://picsum.photos/200/200",
-        mess: this.productForm.value.mess || "", 
-
+  createProduct(): void {
+    this.productService.createProduct(this.product).subscribe(
+      (response) => {
+        console.log('Product created successfully');
+        // Thực hiện các xử lý khác sau khi tạo sản phẩm thành công
+      },
+      (error) => {  
+        console.log('An error occurred while creating product:', error);
+        // Xử lý lỗi nếu có
       }
-      this.productService.addProduct(product).subscribe(data => {
-        alert("Add product successfully.")
-        this.Router.navigateByUrl('/admin/locations')
-      })
-    }
-    
+    );
   }
 }
