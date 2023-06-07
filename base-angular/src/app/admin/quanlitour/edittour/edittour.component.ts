@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IProduct } from 'src/app/interfaces/diadiem';
+import { Prop } from 'src/app/interfaces/tour';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./edittour.component.css']
 })
 export class EdittourComponent {
-  product!: IProduct;
+  product!: Prop;
   productForm = this.formBuilder.group({
     location: [''],
     img: ["https://picsum.photos/200/200"],
@@ -51,7 +51,7 @@ export class EdittourComponent {
 
   onHandleEdit() {
     if (this.productForm.valid) {
-      const product: IProduct = {
+      const product: Prop = {
         ...this.product, // Use spread operator to clone the original product object
         location: this.productForm.value.location || "",
         img: this.productForm.value.img || "https://picsum.photos/200/200",

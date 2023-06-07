@@ -12,9 +12,9 @@ import { TourComponent } from './pages/tour/tour.component';
 import { DetailtourComponent } from './pages/tour/detailtour/detailtour.component'
 import { DetaillocationComponent } from './pages/location/detaillocation/detaillocation.component'
 import { BlogComponent } from './pages/blog/blog.component';
-import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
-import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
-import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
+// import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
+// import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+// import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
 import { ListtourComponent } from './admin/quanlitour/listtour/listtour.component';
 import { EdittourComponent } from './admin/quanlitour/edittour/edittour.component';
 import { AddtourComponent } from './admin/quanlitour/addtour/addtour.component';
@@ -41,9 +41,9 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'diadiem', component: ListdiadiemComponent },
-      { path: 'adddiadiem', component: AdddiadiemComponent },
-      { path: 'editdiadiem', component: EditdiadiemComponent },
+      // { path: 'diadiem', component: ListdiadiemComponent },
+      // { path: 'adddiadiem', component: AdddiadiemComponent },
+      // { path: 'editdiadiem', component: EditdiadiemComponent },
       { path: 'quanlitour', component: ListtourComponent },
       { path: 'edittour', component: EdittourComponent },
       { path: 'addtour', component: AddtourComponent },
